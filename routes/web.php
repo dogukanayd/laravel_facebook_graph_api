@@ -11,15 +11,32 @@
 |
 */
 
-Route::get('/', function () {
+Route::get('/welcome', function () {
     return view('welcome');
 });
 
+Route::get('/', function () {
+    return view('tests/home');
+});
+
+Route::get('/test', function(){
+	return view('tests/home');
+});
+
+
 //Route::post('login', 'FacebookUser@store');
 
-Route::post('login', 'FacebookUser@store');
+Route::post('log', 'FacebookUser@store');
 
-Route::get('login', function()
+Route::get('log', function()
 {
-    return View::make('login');
+    return View::make('welcome');
 });
+
+Route::group(['middleware' => 'admin'], function(){
+	Route::resource('admin/users', 'AdminUsersController');
+});
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
