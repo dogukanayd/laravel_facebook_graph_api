@@ -40,3 +40,37 @@ Route::group(['middleware' => 'admin'], function(){
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+/*
+|--------------------------------------------------------------------------
+| 4 farklı test için
+|--------------------------------------------------------------------------
+|
+*/
+Route::post('/neuroticism', 'FacebookUser@store');
+Route::get('/neuroticism', function(){
+    return view::make('tests/test/neuroticism');
+});
+
+Route::get('/agreeableness', function(){
+    return view('tests/test/agreeableness');
+});
+
+Route::get('/conscientiousness', function(){
+    return view('tests/test/conscientiousness');
+});
+
+Route::get('/extraversion', function(){
+    return view('tests/test/extraversion');
+});
+
+
+
+
+
+
+
+
+
+
+

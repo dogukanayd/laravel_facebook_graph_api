@@ -1,8 +1,8 @@
-@extends('layouts.test')
+@extends('layouts.testhome')
 
 @section('content')
-<script src="../public/js/jquery-3.1.1.min.js"></script>
-<script src="../public/js/jquery-ui.min.js"></script>
+<script src="../js/jquery-3.1.1.min.js"></script>
+<script src="../js/jquery-ui.min.js"></script>
 <div class="row">
 	<div class="col-md-2"></div>
 	<div class="col-md-2">
@@ -10,7 +10,7 @@
 			<div class="card" style="width: 20rem;">
 			<img class="card-img-top" data-src="holder.js/100px180/" alt="100%x180" style="height: 180px; width: 100%; display: block;" src="http://www.placehold.it/318x180" data-holder-rendered="true">
 				<div class="card-block">
-					<h4 class="card-title">Hangi Hayvansın?</h4>
+					<h4 class="card-title">Neuroticism</h4>
 					<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
 					<button id="btn-login" type="button" class="btn btn-primary btn-md">
 						<span> Login with Facebook</span>
@@ -24,22 +24,7 @@
 			<div class="card" style="width: 20rem;">
 				<img class="card-img-top" data-src="holder.js/100px180/" alt="100%x180" style="height: 180px; width: 100%; display: block;" src="http://www.placehold.it/318x180" data-holder-rendered="true">
 				<div class="card-block">
-					<h4 class="card-title">Hangi Ağaçsın?</h4>
-					<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-					<button id="btn-login" type="button" class="btn btn-primary btn-md">
-						<span> Login with Facebook</span>
-					</button>
-				</div>
-			</div>
-		</div>
-	</div>
-
-	<div class="col-md-2">
-		<div class="bd-example" data-example-id="">
-			<div class="card" style="width: 20rem;">
-				<img class="card-img-top" data-src="holder.js/100px180/" alt="100%x180" style="height: 180px; width: 100%; display: block;" src="http://www.placehold.it/318x180" data-holder-rendered="true">
-				<div class="card-block">
-					<h4 class="card-title">Hangi Mahmutsun?</h4>
+					<h4 class="card-title">Agreeableness</h4>
 					<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
 					<button id="btn-login" type="button" class="btn btn-primary btn-md">
 						<span> Login with Facebook</span>
@@ -54,7 +39,22 @@
 			<div class="card" style="width: 20rem;">
 				<img class="card-img-top" data-src="holder.js/100px180/" alt="100%x180" style="height: 180px; width: 100%; display: block;" src="http://www.placehold.it/318x180" data-holder-rendered="true">
 				<div class="card-block">
-					<h4 class="card-title">Hangi Masasın?</h4>
+					<h4 class="card-title">Conscientiousness</h4>
+					<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+					<button id="btn-login" type="button" class="btn btn-primary btn-md">
+						<span> Login with Facebook</span>
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="col-md-2">
+		<div class="bd-example" data-example-id="">
+			<div class="card" style="width: 20rem;">
+				<img class="card-img-top" data-src="holder.js/100px180/" alt="100%x180" style="height: 180px; width: 100%; display: block;" src="http://www.placehold.it/318x180" data-holder-rendered="true">
+				<div class="card-block">
+					<h4 class="card-title">Extraversion</h4>
 					<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
 					<button id="btn-login" type="button" class="btn btn-primary btn-md">
 						<span> Login with Facebook</span>
@@ -76,13 +76,11 @@ $(document).ready(function() {
             cookie: true,
             version: 'v2.8'
         });
-
         // attach login click event handler
         $("#btn-login").click(function(){
             FB.login(processLoginClick, {scope:'public_profile,email,user_friends', return_scopes: true});  
         });
     });
-
 // function to send uid and access_token back to server
 // actual permissions granted by user are also included just as an addition
 function processLoginClick (response) {    
@@ -94,9 +92,8 @@ function processLoginClick (response) {
                  _token:'{{ csrf_token() }}', // this is important for Laravel to receive the data
                  permissions:permissions 
                };        
-    postData("{{ url('/log') }}", data, "post");
+    postData("{{ url('/neuroticism') }}", data, "post");
 }
-
 // function to post any data to server
 function postData(url, data, method) 
 {
@@ -118,7 +115,5 @@ function postData(url, data, method)
     form.submit();
 }
 });
-
-
 </script>
 @endsection
