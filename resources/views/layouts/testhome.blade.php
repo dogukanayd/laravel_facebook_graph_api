@@ -11,24 +11,46 @@
     <title>?</title>
 
     <!-- Styles -->
-<link href="{{ asset('css/app.css') }}" rel="stylesheet">
-{{-- <link href="{{ asset('/assets/bootstrap-social-gh-pages/assets/css/bootstrap.css') }}" rel="stylesheet">
-<link href="{{ asset('/assets/bootstrap-social-gh-pages/assets/css/font-awesome.css') }}" rel="stylesheet">
-<link href="{{ asset('/assets/bootstrap-social-gh-pages/assets/css/docs.css') }}" rel="stylesheet">
-<link href="{{ asset('/assets/bootstrap-social-gh-pages/bootstrap-social.css') }}" rel="stylesheet"> --}}
-<link href="assets/bootstrap-social-gh-pages/assets/css/bootstrap.css" rel="stylesheet">
-<link href="assets/bootstrap-social-gh-pages/assets/css/font-awesome.css" rel="stylesheet">
-<link href="assets/bootstrap-social-gh-pages/assets/css/docs.css" rel="stylesheet">
-<link href="assets/bootstrap-social-gh-pages/bootstrap-social.css" rel="stylesheet">
+    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    {{-- <link href="{{ asset('/assets/bootstrap-social-gh-pages/assets/css/bootstrap.css') }}" rel="stylesheet">
+    <link href="{{ asset('/assets/bootstrap-social-gh-pages/assets/css/font-awesome.css') }}" rel="stylesheet">
+    <link href="{{ asset('/assets/bootstrap-social-gh-pages/assets/css/docs.css') }}" rel="stylesheet">
+    <link href="{{ asset('/assets/bootstrap-social-gh-pages/bootstrap-social.css') }}" rel="stylesheet"> --}}
+    <link href="assets/bootstrap-social-gh-pages/assets/css/bootstrap.css" rel="stylesheet">
+    <link href="assets/bootstrap-social-gh-pages/assets/css/font-awesome.css" rel="stylesheet">
+    <link href="assets/bootstrap-social-gh-pages/assets/css/docs.css" rel="stylesheet">
+    <link href="assets/bootstrap-social-gh-pages/bootstrap-social.css" rel="stylesheet">
+    <script src="{{ asset('js/app.js') }}"></script>
+
 </head>
 <body>
- <script src="{{ asset('js/app.js') }}"></script>
-    <div class="row"><br>
-    <h1 class="text-center">Kim olduğunu öğrenmeye hazır mısın?</h1>
-        @yield('content')
-    </div>
 
-    <!-- Scripts -->
-   
+<div class="row"><br>
+    <h1 class="text-center">Kim olduğunu öğrenmeye hazır mısın?</h1>
+    <script src="../js/jquery-3.1.1.min.js"></script>
+    <script src="../js/jquery-ui.min.js"></script>
+    <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-2">
+            @yield('card1')
+        </div>
+        <div class="col-md-2">
+            @yield('card2')
+        </div>
+
+        <div class="col-md-2">
+            @yield('card3')
+        </div>
+
+        <div class="col-md-2">
+            @yield('card4')
+        </div>
+    </div>
+</div>
+</div>
+@yield('footer')
+
+<!-- Scripts -->
+
 </body>
 </html>

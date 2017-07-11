@@ -17,7 +17,6 @@ class FacebookUser extends Controller
         // retrieve form input parameters
         $uid = Request::input('uid');
         $access_token = Request::input('access_token');
-        $permissions = Request::input('permissions');
 
         // assuming we have a User model already set up for our database
         // and assuming facebook_id field to exist in users table in database

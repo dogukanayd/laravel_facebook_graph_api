@@ -23,6 +23,14 @@ Route::get('/test', function(){
 	return view('tests/home');
 });
 
+/*Route::get('/', function () {
+    return view('layouts/testhome');
+});
+
+Route::get('/test', function(){
+    return view('layouts/testhome');
+});*/
+
 
 //Route::post('login', 'FacebookUser@store');
 
@@ -52,14 +60,17 @@ Route::get('/neuroticism', function(){
     return view::make('tests/test/neuroticism');
 });
 
+Route::post('/agreeableness', 'FacebookUser@store');
 Route::get('/agreeableness', function(){
-    return view('tests/test/agreeableness');
+    return view::make('tests/test/agreeableness');
 });
 
+Route::post('/conscientiousness', 'FacebookUser@store');
 Route::get('/conscientiousness', function(){
-    return view('tests/test/conscientiousness');
+    return view::make('tests/test/conscientiousness');
 });
 
+Route::post('/extraversion', 'FacebookUser@store');
 Route::get('/extraversion', function(){
     return view('tests/test/extraversion');
 });
