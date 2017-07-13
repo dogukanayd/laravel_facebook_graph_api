@@ -1,5 +1,4 @@
 <?php
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -19,9 +18,9 @@ Route::get('/', function () {
     return view('tests/home');
 });
 
-Route::get('/test', function(){
+/*Route::get('/test', function(){
 	return view('tests/home');
-});
+});*/
 
 /*Route::get('/', function () {
     return view('layouts/testhome');
@@ -33,16 +32,19 @@ Route::get('/test', function(){
 
 
 //Route::post('login', 'FacebookUser@store');
-
+Route::get('/login', function () {
+    return view('auth/login');
+});
 Route::post('log', 'FacebookUser@store');
 
-Route::get('log', function()
-{
-    return View::make('welcome');
+Route::get('log', function () {
+    return view('log');
 });
 
-Route::group(['middleware' => 'admin'], function(){
-	Route::resource('admin/users', 'AdminUsersController');
+Route::group(['middleware' => 'admin'], function () {
+    Route::get('/admin', function () {
+        return view('admin.index');
+    });
 });
 
 Auth::routes();
@@ -55,23 +57,29 @@ Route::get('/home', 'HomeController@index')->name('home');
 |--------------------------------------------------------------------------
 |
 */
+//return view::make olacaktı silindi
 Route::post('/neuroticism', 'FacebookUser@store');
-Route::get('/neuroticism', function(){
-    return view::make('tests/test/neuroticism');
+Route::get('/neuroticism', function () {
+    return view('tests/test/neuroticism');
+});
+
+Route::post('/marvel', 'FacebookUser@store');
+Route::get('/marvel', function(){
+    return view('tests/singleTest/marvel');
 });
 
 Route::post('/agreeableness', 'FacebookUser@store');
-Route::get('/agreeableness', function(){
-    return view::make('tests/test/agreeableness');
+Route::get('/agreeableness', function () {
+    return view('tests/test/agreeableness');
 });
 
 Route::post('/conscientiousness', 'FacebookUser@store');
-Route::get('/conscientiousness', function(){
-    return view::make('tests/test/conscientiousness');
+Route::get('/conscientiousness', function () {
+    return view('tests/test/conscientiousness');
 });
 
 Route::post('/extraversion', 'FacebookUser@store');
-Route::get('/extraversion', function(){
+Route::get('/extraversion', function () {
     return view('tests/test/extraversion');
 });
 

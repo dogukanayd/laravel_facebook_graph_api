@@ -1,8 +1,8 @@
 @extends('layouts.testhome')
 @section('card1')
     <div class="bd-example" data-example-id="">
-        <div class="card" style="width: 20rem;">
-            <img class="card-img-top" data-src="holder.js/100px180/" alt="100%x180" style="height: 180px; width: 100%; display: block;" src="http://www.placehold.it/318x180" data-holder-rendered="true">
+        <div class="card thumbnail" style="width: 20rem;">
+            <img class="card-img-top" data-src="holder.js/100px180/" alt="100%x180" style="height: 190px; width: 100%; display: block;" src="http://www.placehold.it/190x191" data-holder-rendered="true">
             <div class="card-block">
                 <h4 class="card-title">Neuroticism</h4>
                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -18,8 +18,8 @@
 
 @section('card2')
     <div class="bd-example" data-example-id="">
-        <div class="card" style="width: 20rem;">
-            <img class="card-img-top" data-src="holder.js/100px180/" alt="100%x180" style="height: 180px; width: 100%; display: block;" src="http://www.placehold.it/318x180" data-holder-rendered="true">
+        <div class="card thumbnail" style="width: 20rem;">
+            <img class="card-img-top" data-src="holder.js/100px180/" alt="100%x180" style="height: 190px; width: 100%; display: block;" src="http://www.placehold.it/190x191" data-holder-rendered="true">
             <div class="card-block">
                 <h4 class="card-title">Agreeableness</h4>
                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -34,8 +34,8 @@
 
 @section('card3')
     <div class="bd-example" data-example-id="">
-        <div class="card" style="width: 20rem;">
-            <img class="card-img-top" data-src="holder.js/100px180/" alt="100%x180" style="height: 180px; width: 100%; display: block;" src="http://www.placehold.it/318x180" data-holder-rendered="true">
+        <div class="card thumbnail" style="width: 20rem;">
+            <img class="card-img-top" data-src="holder.js/100px180/" alt="100%x180" style="height: 190px; width: 100%; display: block;" src="http://www.placehold.it/190x191" data-holder-rendered="true">
             <div class="card-block">
                 <h4 class="card-title">Conscientiousness</h4>
                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -50,8 +50,8 @@
 
 @section('card4')
     <div class="bd-example" data-example-id="">
-        <div class="card" style="width: 20rem;">
-            <img class="card-img-top" data-src="holder.js/100px180/" alt="100%x180" style="height: 180px; width: 100%; display: block;" src="http://www.placehold.it/318x180" data-holder-rendered="true">
+        <div class="card thumbnail" style="width: 20rem;">
+            <img class="card-img-top" data-src="holder.js/100px180/" alt="100%x180" style="height: 190px; width: 100%; display: block;" src="http://www.placehold.it/190x191" data-holder-rendered="true">
             <div class="card-block">
                 <h4 class="card-title">Extraversion</h4>
                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -65,7 +65,7 @@
 @endsection
 
 @section('footer')
-    <script>
+    {{--<script>
         function goToFacebook(btnName,postDataUrl) {
             $(document).ready(function () {
                 $.ajaxSetup({cache: true}); // since I am using jquery as well in my app
@@ -120,5 +120,5 @@
                 }
             });
         }
-    </script>
+    </script>--}}
     @endsection

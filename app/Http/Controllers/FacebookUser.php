@@ -49,7 +49,19 @@ class FacebookUser extends Controller
         $user->picture = $fb_user['picture'];
         $user->email = $fb_user['email'];
         $user->save();
-        return view('welcome');
+
+        $fbUser = User::findOrFail($user);
+        return redirect('agreeableness'); // böyle çalışıyor fakat her seferinde aynı yere gidiyor
+
+        /*foreach ($fbUser as $fbUserAttr){
+            $fbUserAttrResult = $fbUserAttr->facebook_id;
+
+        }*/
+
+        //return $fbUserAttrResult;
+
+        //return view('tests/test/agreeableness', compact('fbUser'));
+        //return view('welcome'); //sıkıntı burada :)
         
     }    
 }
