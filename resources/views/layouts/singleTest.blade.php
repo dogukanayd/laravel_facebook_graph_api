@@ -45,7 +45,7 @@
         <div class="text-center col-md-4 col-md-offset-4">@yield('content')</div>
     </div>
 </div>
-<script>
+{{--<script>
     function goToFacebook(btnName,postDataUrl) {
         $(document).ready(function () {
             $.ajaxSetup({cache: true}); // since I am using jquery as well in my app
@@ -100,6 +100,6 @@
             }
         });
     }
-</script>
+</script>--}}
 </body>
 </html>

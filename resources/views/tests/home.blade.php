@@ -1,14 +1,14 @@
 @extends('layouts.testhome')
 @section('card1')
     <div class="bd-example" data-example-id="">
-        <div class="card thumbnail" style="width: 20rem;">
+        <div class="card" style="width: 20rem;">
             <img class="card-img-top" data-src="holder.js/100px180/" alt="100%x180" style="height: 190px; width: 100%; display: block;" src="http://www.placehold.it/190x191" data-holder-rendered="true">
             <div class="card-block">
-                <h4 class="card-title">Neuroticism</h4>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <button id="neuroticism" type="button" class="btn btn-primary btn-md" onclick="goToFacebook('#neuroticism','{{ url("/neuroticism") }}')" >
-                    <span> Login with Facebook</span>
-                </button>
+                <center><h4 class="card-title">Neuroticism</h4></center>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.br</p>
+                <a href="{{ url('/marvel') }}" id="agreeableness" type="button" class="btn btn-primary btn-md center-block" onclick="goToFacebook('#agreeableness','{{ url("/agreeableness") }}')">
+                    <span> Teste Git</span>
+                </a>
 
             </div>
         </div>
@@ -18,14 +18,14 @@
 
 @section('card2')
     <div class="bd-example" data-example-id="">
-        <div class="card thumbnail" style="width: 20rem;">
+        <div class="card " style="width: 20rem;">
             <img class="card-img-top" data-src="holder.js/100px180/" alt="100%x180" style="height: 190px; width: 100%; display: block;" src="http://www.placehold.it/190x191" data-holder-rendered="true">
             <div class="card-block">
-                <h4 class="card-title">Agreeableness</h4>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <button id="agreeableness" type="button" class="btn btn-primary btn-md" onclick="goToFacebook('#agreeableness','{{ url("/agreeableness") }}')">
-                    <span> Login with Facebook</span>
-                </button>
+                <center><h4 class="card-title center-block">Hangi Marvel Karakterisin?</h4></center>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's</p>
+                <a href="{{ url('/marvel') }}" id="agreeableness" type="button" class="btn btn-primary btn-md center-block" onclick="goToFacebook('#agreeableness','{{ url("/agreeableness") }}')">
+                    <span> Teste Git</span>
+                </a>
             </div>
         </div>
     </div>
@@ -34,14 +34,14 @@
 
 @section('card3')
     <div class="bd-example" data-example-id="">
-        <div class="card thumbnail" style="width: 20rem;">
+        <div class="card" style="width: 20rem;">
             <img class="card-img-top" data-src="holder.js/100px180/" alt="100%x180" style="height: 190px; width: 100%; display: block;" src="http://www.placehold.it/190x191" data-holder-rendered="true">
             <div class="card-block">
                 <h4 class="card-title">Conscientiousness</h4>
                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <button id="conscientiousness" type="button" class="btn btn-primary btn-md" onclick="goToFacebook('#conscientiousness','{{ url("/conscientiousness") }}')">
-                    <span> Login with Facebook</span>
-                </button>
+                <a href="{{ url('/marvel') }}" id="agreeableness" type="button" class="btn btn-primary btn-md center-block" onclick="goToFacebook('#agreeableness','{{ url("/agreeableness") }}')">
+                    <span> Teste Git</span>
+                </a>
             </div>
         </div>
     </div>
@@ -50,14 +50,14 @@
 
 @section('card4')
     <div class="bd-example" data-example-id="">
-        <div class="card thumbnail" style="width: 20rem;">
+        <div class="card" style="width: 20rem;">
             <img class="card-img-top" data-src="holder.js/100px180/" alt="100%x180" style="height: 190px; width: 100%; display: block;" src="http://www.placehold.it/190x191" data-holder-rendered="true">
             <div class="card-block">
                 <h4 class="card-title">Extraversion</h4>
                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <button id="extraversion" type="button" class="btn btn-primary btn-md" onclick="goToFacebook('#extraversion','{{ url("/extraversion") }}')">
-                    <span> Login with Facebook</span>
-                </button>
+                <a href="{{ url('/marvel') }}" id="agreeableness" type="button" class="btn btn-primary btn-md center-block" onclick="goToFacebook('#agreeableness','{{ url("/agreeableness") }}')">
+                    <span> Teste Git</span>
+                </a>
             </div>
         </div>
     </div>
