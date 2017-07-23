@@ -53,4 +53,11 @@ class User extends Authenticatable
             return false;
         }
     }
+
+     function getFacebookUserId()
+    {
+        $uid = Request::input('uid');
+        $fbUser = User::findOrFail($uid);
+        return $fbUser;
+    }
 }

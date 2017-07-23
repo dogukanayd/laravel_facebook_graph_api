@@ -1,18 +1,18 @@
 <?php
 
 namespace App\Http\Controllers;
+
 use Request;
 //use Illuminate\Http\Request;
 use Facebook\Facebook;
 use App\User;
-
-
+use Session;
 
 
 class FacebookUser extends Controller
 {
     //
-    public function store(Facebook $fb) //method injection
+    public function getFacebookInfo(Facebook $fb) //method injection
     {
         // retrieve form input parameters
         $uid = Request::input('uid');
@@ -20,8 +20,8 @@ class FacebookUser extends Controller
 
         // assuming we have a User model already set up for our database
         // and assuming facebook_id field to exist in users table in database
-        $user = User::firstOrCreate(['facebook_id' => $uid]); 
-         
+        $user = User::firstOrCreate(['facebook_id' => $uid]);
+
         // get long term access token for future use
         $oAuth2Client = $fb->getOAuth2Client();
 
@@ -36,9 +36,9 @@ class FacebookUser extends Controller
 
         // call api to retrieve person's public_profile details
         $fields = "id,cover,name,first_name,last_name,age_range,link,gender,locale,picture,timezone,updated_time,verified,email";
-        $fb_user = $fb->get('/me?fields='.$fields)->getGraphUser();
+        $fb_user = $fb->get('/me?fields=' . $fields)->getGraphUser();
         //dump($fb_user);
-       
+
         $user->name = $fb_user['name'];
         $user->first_name = $fb_user['first_name'];
         $user->last_name = $fb_user['last_name'];
@@ -50,18 +50,35 @@ class FacebookUser extends Controller
         $user->email = $fb_user['email'];
         $user->save();
 
-        $fbUser = User::findOrFail($user);
-        return redirect('agreeableness'); // böyle çalışıyor fakat her seferinde aynı yere gidiyor
+        Session::put('facebookId', $uid);
 
-        /*foreach ($fbUser as $fbUserAttr){
-            $fbUserAttrResult = $fbUserAttr->facebook_id;
+    }
 
-        }*/
+    public function agreeableness(Facebook $fb)
+    {
+        $this->getFacebookInfo($fb);
 
-        //return $fbUserAttrResult;
+        return redirect('/agreeableness');
+    }
 
-        //return view('tests/test/agreeableness', compact('fbUser'));
-        //return view('welcome'); //sıkıntı burada :)
-        
-    }    
+    public function neuroticism(Facebook $fb)
+    {
+
+        $this->getFacebookInfo($fb);
+
+        return redirect('/neuroticism');
+    }
+
+    public function conscientiousness(Facebook $fb)
+    {
+        $this->getFacebookInfo($fb);
+
+        return redirect('/conscientiousness');
+    }
+
+    public function extraversion(Facebook $fb)
+    {
+        $this->getFacebookInfo($fb);
+        return redirect('/extraversion');
+    }
 }

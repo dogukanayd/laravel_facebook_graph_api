@@ -4,9 +4,9 @@
         <div class="card" style="width: 20rem;">
             <img class="card-img-top" data-src="holder.js/100px180/" alt="100%x180" style="height: 190px; width: 100%; display: block;" src="http://www.placehold.it/190x191" data-holder-rendered="true">
             <div class="card-block">
-                <center><h4 class="card-title">Neuroticism</h4></center>
+                <center><h4 class="card-title">Hangi DC Comics Karakterisin?</h4></center>
                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.br</p>
-                <a href="{{ url('/marvel') }}" id="agreeableness" type="button" class="btn btn-primary btn-md center-block" onclick="goToFacebook('#agreeableness','{{ url("/agreeableness") }}')">
+                <a href="{{ url('/dc') }}" id="neuroticism" type="button" class="btn btn-primary btn-md center-block" onclick="goToFacebook('#agreeableness','{{ url("/agreeableness") }}')">
                     <span> Teste Git</span>
                 </a>
 
@@ -37,9 +37,9 @@
         <div class="card" style="width: 20rem;">
             <img class="card-img-top" data-src="holder.js/100px180/" alt="100%x180" style="height: 190px; width: 100%; display: block;" src="http://www.placehold.it/190x191" data-holder-rendered="true">
             <div class="card-block">
-                <h4 class="card-title">Conscientiousness</h4>
+                <h4 class="card-title">Hangi Friends Karakterisin?</h4>
                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="{{ url('/marvel') }}" id="agreeableness" type="button" class="btn btn-primary btn-md center-block" onclick="goToFacebook('#agreeableness','{{ url("/agreeableness") }}')">
+                <a href="{{ url('/friends') }}" id="agreeableness" type="button" class="btn btn-primary btn-md center-block" onclick="goToFacebook('#conscientiousness','{{ url("/conscientiousness") }}')">
                     <span> Teste Git</span>
                 </a>
             </div>
@@ -53,9 +53,9 @@
         <div class="card" style="width: 20rem;">
             <img class="card-img-top" data-src="holder.js/100px180/" alt="100%x180" style="height: 190px; width: 100%; display: block;" src="http://www.placehold.it/190x191" data-holder-rendered="true">
             <div class="card-block">
-                <h4 class="card-title">Extraversion</h4>
+                <h4 class="card-title">Hangi HIMYM karakterisin?</h4>
                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="{{ url('/marvel') }}" id="agreeableness" type="button" class="btn btn-primary btn-md center-block" onclick="goToFacebook('#agreeableness','{{ url("/agreeableness") }}')">
+                <a href="{{ url('/himym') }}" id="extraversion" type="button" class="btn btn-primary btn-md center-block" onclick="goToFacebook('#extraversion','{{ url("/extraversion") }}')">
                     <span> Teste Git</span>
                 </a>
             </div>
