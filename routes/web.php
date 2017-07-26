@@ -15,6 +15,10 @@ Route::get('api', function()
     return view('api');
 });
 
+Route::get('result', function(){
+    return view('result.marvel');
+});
+
 /*Route::get('test', function()
 {
     return view('api');
