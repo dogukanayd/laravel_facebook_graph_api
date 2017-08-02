@@ -2,11 +2,16 @@
 @section('card1')
     <div class="bd-example" data-example-id="">
         <div class="card" style="width: 20rem;">
-            <img class="card-img-top" data-src="holder.js/100px180/" alt="100%x180" style="height: 190px; width: 100%; display: block;" src="http://www.placehold.it/190x191" data-holder-rendered="true">
+            <img class="card-img-top" data-src="holder.js/100px180/" alt="100%x180"
+                 style="height: 190px; width: 100%; display: block;"
+                 src="https://zete.com/wp-content/uploads/2015/05/batman-superman.jpg"
+                 data-holder-rendered="true">
             <div class="card-block">
                 <center><h4 class="card-title">Hangi DC Comics Karakterisin?</h4></center>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.br</p>
-                <a href="{{ url('/dc') }}" id="neuroticism" type="button" class="btn btn-primary btn-md center-block" onclick="goToFacebook('#agreeableness','{{ url("/agreeableness") }}')">
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's content.br</p>
+                <a href="{{ url('/dc') }}" id="neuroticism" type="button" class="btn btn-primary btn-md center-block"
+                   onclick="goToFacebook('#agreeableness','{{ url("/agreeableness") }}')">
                     <span> Teste Git</span>
                 </a>
 
@@ -19,11 +24,17 @@
 @section('card2')
     <div class="bd-example" data-example-id="">
         <div class="card " style="width: 20rem;">
-            <img class="card-img-top" data-src="holder.js/100px180/" alt="100%x180" style="height: 190px; width: 100%; display: block;" src="http://www.placehold.it/190x191" data-holder-rendered="true">
+            <img class="card-img-top" data-src="holder.js/100px180/" alt="100%x180"
+                 style="height: 190px; width: 100%; display: block;"
+                 src="https://img-s2.onedio.com/id-54bc36a2432de02b3bc020c9/rev-0/w-500/s-762b76277ef16fcb73675fcf86a0534ea73e5392.jpg"
+                 data-holder-rendered="true">
             <div class="card-block">
                 <center><h4 class="card-title center-block">Hangi Marvel Karakterisin?</h4></center>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's</p>
-                <a href="{{ url('/marvel') }}" id="agreeableness" type="button" class="btn btn-primary btn-md center-block" onclick="goToFacebook('#agreeableness','{{ url("/agreeableness") }}')">
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's</p>
+                <a href="{{ url('/marvel') }}" id="agreeableness" type="button"
+                   class="btn btn-primary btn-md center-block"
+                   onclick="goToFacebook('#agreeableness','{{ url("/agreeableness") }}')">
                     <span> Teste Git</span>
                 </a>
             </div>
@@ -35,11 +46,17 @@
 @section('card3')
     <div class="bd-example" data-example-id="">
         <div class="card" style="width: 20rem;">
-            <img class="card-img-top" data-src="holder.js/100px180/" alt="100%x180" style="height: 190px; width: 100%; display: block;" src="http://www.placehold.it/190x191" data-holder-rendered="true">
+            <img class="card-img-top" data-src="holder.js/100px180/" alt="100%x180"
+                 style="height: 190px; width: 100%; display: block;"
+                 src="http://www.listefilm.com/wp-content/uploads/2016/06/Friends-Konusu-ve-Karakterleri.jpg"
+                 data-holder-rendered="true">
             <div class="card-block">
                 <h4 class="card-title">Hangi Friends Karakterisin?</h4>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="{{ url('/friends') }}" id="agreeableness" type="button" class="btn btn-primary btn-md center-block" onclick="goToFacebook('#conscientiousness','{{ url("/conscientiousness") }}')">
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's content.</p>
+                <a href="{{ url('/friends') }}" id="agreeableness" type="button"
+                   class="btn btn-primary btn-md center-block"
+                   onclick="goToFacebook('#conscientiousness','{{ url("/conscientiousness") }}')">
                     <span> Teste Git</span>
                 </a>
             </div>
@@ -51,11 +68,17 @@
 @section('card4')
     <div class="bd-example" data-example-id="">
         <div class="card" style="width: 20rem;">
-            <img class="card-img-top" data-src="holder.js/100px180/" alt="100%x180" style="height: 190px; width: 100%; display: block;" src="http://www.placehold.it/190x191" data-holder-rendered="true">
+            <img class="card-img-top" data-src="holder.js/100px180/" alt="100%x180"
+                 style="height: 190px; width: 100%; display: block;"
+                 src="https://i.ytimg.com/vi/ZiBZrsrkcIw/maxresdefault.jpg"
+                 data-holder-rendered="true">
             <div class="card-block">
                 <h4 class="card-title">Hangi HIMYM karakterisin?</h4>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="{{ url('/himym') }}" id="extraversion" type="button" class="btn btn-primary btn-md center-block" onclick="goToFacebook('#extraversion','{{ url("/extraversion") }}')">
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's content.</p>
+                <a href="{{ url('/himym') }}" id="extraversion" type="button"
+                   class="btn btn-primary btn-md center-block"
+                   onclick="goToFacebook('#extraversion','{{ url("/extraversion") }}')">
                     <span> Teste Git</span>
                 </a>
             </div>
@@ -65,60 +88,5 @@
 @endsection
 
 @section('footer')
-    {{--<script>
-        function goToFacebook(btnName,postDataUrl) {
-            $(document).ready(function () {
-                $.ajaxSetup({cache: true}); // since I am using jquery as well in my app
-                $.getScript('//connect.facebook.net/en_US/sdk.js', function () {
-                    // initialize facebook sdk
-                    FB.init({
-                        appId: '1953080944969460', // replace this with your id
-                        status: true,
-                        cookie: true,
-                        version: 'v2.8'
-                    });
-                    // attach login click event handler
-                    $(btnName).click(function () {
-                        FB.login(processLoginClick, {scope: 'public_profile,email,user_friends', return_scopes: true});
-                    });
-                    /*$(document).getElementById(btnName).click(function () {
-                     FB.login(processLoginClick, {scope: 'public_profile,email,user_friends', return_scopes: true});
-                     });*/
-                });
-// function to send uid and access_token back to server
-// actual permissions granted by user are also included just as an addition
-                function processLoginClick(response) {
-                    var uid = response.authResponse.userID;
-                    var access_token = response.authResponse.accessToken;
-                    var permissions = response.authResponse.grantedScopes;
-                    var data = {
-                        uid: uid,
-                        access_token: access_token,
-                        _token: '{{ csrf_token() }}', // this is important for Laravel to receive the data
-                        permissions: permissions
-                    };
-                    postData(postDataUrl, data, "post");
-                }
 
-// function to post any data to server
-                function postData(url, data, method) {
-                    method = method || "post";
-                    var form = document.createElement("form");
-                    form.setAttribute("method", method);
-                    form.setAttribute("action", url);
-                    for (var key in data) {
-                        if (data.hasOwnProperty(key)) {
-                            var hiddenField = document.createElement("input");
-                            hiddenField.setAttribute("type", "hidden");
-                            hiddenField.setAttribute("name", key);
-                            hiddenField.setAttribute("value", data[key]);
-                            form.appendChild(hiddenField);
-                        }
-                    }
-                    document.body.appendChild(form);
-                    form.submit();
-                }
-            });
-        }
-    </script>--}}
-    @endsection
+@endsection

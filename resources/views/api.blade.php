@@ -7,7 +7,6 @@ function getAnswers($id, $url)
     foreach ($allData['responses'] as $singleData) {
         $is_completed = $singleData['completed'];
         if ($is_completed == 1) {
-            $answers = $singleData['answers'];
             $hidden = $singleData['hidden'];
             $singleAnswer_a = $singleData['answers']['opinionscale_jUmHCZYrWgd0'];
             $singleAnswer_b = $singleData['answers']['opinionscale_OMjYatWCXk24'];
@@ -17,29 +16,21 @@ function getAnswers($id, $url)
             $singleAnswer_f = $singleData['answers']['opinionscale_hRdOviQZBPHs'];
             $singleAnswer_g = $singleData['answers']['opinionscale_mze0UYvEGdG0'];
             $singleAnswer_h = $singleData['answers']['opinionscale_PonE1VwNcsK9'];
-            
+
             foreach ($hidden as $facebookId) {
                 if ($facebookId == $id) {
                     echo $facebookId . '<br>';
-                    // echo $singleAnswer_a . '<br>';
-                    // echo $singleAnswer_b . '<br>';
-                    // echo $singleAnswer_c . '<br>';
-                    // echo $singleAnswer_d . '<br>';
-                    // echo $singleAnswer_e . '<br>';
-                    // echo $singleAnswer_f . '<br>';
-                    // echo $singleAnswer_g . '<br>';
-                    // echo $singleAnswer_h . '<br>';
-                    $answerTotal =  $singleAnswer_a +
-                                    $singleAnswer_b +
-                                    $singleAnswer_c +
-                                    $singleAnswer_d +
-                                    $singleAnswer_e +
-                                    $singleAnswer_f +
-                                    $singleAnswer_g +
-                                    $singleAnswer_h ;
-                                    $finalResult = $answerTotal / 8;
+                    $answerTotal = $singleAnswer_a +
+                        $singleAnswer_b +
+                        $singleAnswer_c +
+                        $singleAnswer_d +
+                        $singleAnswer_e +
+                        $singleAnswer_f +
+                        $singleAnswer_g +
+                        $singleAnswer_h;
+                    $finalResult = $answerTotal / 8;
                     echo $finalResult . '<br><br>';
-                    
+
                 }
 
             }

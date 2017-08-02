@@ -37,36 +37,19 @@ Route::get('result', function(){
 |
 */
 
-Route::get('/welcome', function () {
-    return view('welcome');
-});
 
 Route::get('/', function () {
     return view('tests/home');
 });
 
-/*Route::get('/test', function(){
-	return view('tests/home');
-});*/
 
-/*Route::get('/', function () {
-    return view('layouts/testhome');
-});
-
-Route::get('/test', function(){
-    return view('layouts/testhome');
-});*/
 
 
 //Route::post('login', 'FacebookUser@store');
 Route::get('/login', function () {
     return view('auth/login');
 });
-Route::post('log', 'FacebookUser@store');
 
-Route::get('log', function () {
-    return view('log');
-});
 
 Route::group(['middleware' => 'admin'], function () {
     Route::get('/admin', function () {
@@ -76,7 +59,7 @@ Route::group(['middleware' => 'admin'], function () {
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+
 
 /*
 |--------------------------------------------------------------------------

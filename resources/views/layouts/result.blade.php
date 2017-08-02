@@ -14,6 +14,10 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
 <body>
-<p>@yield('result')</p>
+<div class="container container-table">
+    <div class="row vertical-center-row">
+        <div class="text-center col-md-4 col-md-offset-4">@yield('result')</div>
+    </div>
+</div>
 </body>
 </html>
